@@ -93,7 +93,9 @@ export default {
       .then(coordinates => {
         this.location = coordinates
         this.loadTemperatures()
-        this.loadCity()
+        if (process.env.VUE_APP_GOOGLE_MAPS_API_KEY) {
+          this.loadCity()
+        }
       })
   },
   methods: {

@@ -1,0 +1,111 @@
+/*=========================================================================================
+  File Name: _fixesVuesax.scss
+  Description: Partial - Fixes/Add vuesax framework styles
+  ----------------------------------------------------------------------------------------
+  Author: Pixinvent
+  Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+
+// ======================================================================================
+// Alert
+// ======================================================================================
+
+// Alert shadow and color issue
+.con-vs-alert {
+  box-shadow: none !important;
+}
+
+.vs-alert {
+  font-size: 1rem;
+  font-weight: 500;
+
+  code {
+    background: #b5b5b5;
+    color: $white;
+  }
+}
+
+// .vs-alert {
+//   code.language-markup {
+//     background: transparent !important;
+//     color: #636363 !important;
+//   }
+// }
+
+.vs-alert--title {
+  color: inherit;
+}
+
+// ======================================================================================
+// NavBar
+// ======================================================================================
+
+.vs-navbar--item {
+  a {
+    .vs-navbar & {
+      color: inherit;
+    }
+
+    .vs-navbar-color-transparent &:hover {
+      color: $primary !important;
+    }
+  }
+
+  .vs-navbar-gradient & {
+    &.is-active-item a {
+      color: #fff !important;
+    }
+  }
+}
+
+// ======================================================================================
+// Tabs
+// ======================================================================================
+
+.con-slot-tabs {
+  width: 100%;
+}
+
+.vs-tabs--li {
+  white-space: nowrap;
+
+  button {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .vs-tabs-position-left & {
+    padding: .35rem 0.3rem;
+  }
+}
+// Remove after merge of: https://github.com/lusaxweb/vuesax/pull/637
+.vs-tabs--li {
+  button {
+    font-family: inherit;
+    color: white;
+    .vs-tabs--btn:hover {
+      color: #fff !important;
+    }
+  }
+
+  .vs-icon-primary,
+  .vs-icon-success,
+  .vs-icon-warning,
+  .vs-icon-danger,
+  .vs-icon-dark {
+    color: inherit;
+  }
+}
+
+// Remove after merge of: https://github.com/lusaxweb/vuesax/pull/637
+.vs-tabs {
+  .con-tab {
+    .vs-button-filled {
+      &:hover {
+        color: #fff !important;
+      }
+    }
+  }
+}
+

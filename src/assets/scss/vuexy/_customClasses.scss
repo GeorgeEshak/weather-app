@@ -1,0 +1,319 @@
+// hover background classes
+
+.hover\:bg-primary {
+  &:hover {
+    background-color: rgba(var(--vs-primary), 1) !important;
+  }
+}
+
+
+.hover\:bg-success {
+  &:hover {
+    background-color: rgba(var(--vs-success), 1) !important;
+  }
+}
+
+.hover\:bg-danger {
+  &:hover {
+    background-color: rgba(var(--vs-danger), 1) !important;
+  }
+}
+
+.hover\:bg-warning {
+  &:hover {
+    background-color: rgba(var(--vs-warning), 1) !important;
+  }
+}
+
+.hover\:bg-dark {
+  &:hover {
+    background-color: rgba(var(--vs-dark), 1) !important;
+  }
+}
+
+
+// hover text colors
+.hover\:text-primary {
+  &:hover {
+    color: rgba(var(--vs-primary), 1) !important;
+  }
+}
+
+
+.hover\:text-success {
+  &:hover {
+    color: rgba(var(--vs-success), 1) !important;
+  }
+}
+
+.hover\:text-danger {
+  &:hover {
+    color: rgba(var(--vs-danger), 1) !important;
+  }
+}
+
+.hover\:text-warning {
+  &:hover {
+    color: rgba(var(--vs-warning), 1) !important;
+  }
+}
+
+.hover\:text-dark {
+  &:hover {
+    color: rgba(var(--vs-dark), 1) !important;
+  }
+}
+
+// ======================================================================================
+// Grid
+// ======================================================================================
+
+.vx-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  & > .vx-col {
+    padding: 0 1rem;
+  }
+
+  &.match-height>.vx-col {
+    display: flex;
+  }
+
+  &.no-gutter {
+    margin: 0;
+
+    & > .vx-col {
+      padding: 0;
+    }
+  }
+}
+
+
+// ======================================================================================
+// Input
+// ======================================================================================
+
+.vs-input-no-border {
+  .vs-input--input {
+    border: none !important;
+
+    &:focus {
+      border: none !important;
+    }
+  }
+}
+
+.vs-input-no-shdow-focus {
+  .vs-input--input {
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
+
+.vs-input-shadow-drop {
+  input {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+  }
+}
+
+
+// ======================================================================================
+// Sidebar
+// ======================================================================================
+
+.sidebar-spacer {
+  width: calc(100% - 260px);
+  margin-left: 260px;
+}
+
+.sidebar-spacer-with-margin {
+  width: calc(100% - 260px - 2.2rem);
+  margin-left: calc(260px + 2.2rem);
+}
+
+.sidebar-spacer--wide {
+  width: calc(100% - 400px);
+  margin-left: 400px;
+}
+
+.background-absolute {
+  .vs-sidebar--background {
+    position: absolute;
+  }
+}
+
+.vs-content-sidebar.items-no-padding {
+  .vs-sidebar--items {
+    padding: 0;
+  }
+}
+
+// Create full width sidebar
+.full-vs-sidebar {
+  .vs-sidebar {
+    max-width: calc(100% - 260px);
+    margin-left: 260px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .full-vs-sidebar {
+    .vs-sidebar {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+
+// ======================================================================================
+// Select
+// ======================================================================================
+
+.vs-select-no-border {
+  .vs-select--input {
+    border: none !important;
+  }
+}
+
+
+// ======================================================================================
+// Tabs
+// ======================================================================================
+
+.tabs-shadow-none {
+  .vs-tabs--ul {
+    box-shadow: none;
+  }
+}
+
+.tab-action-btn-fill-conatiner {
+  &.con-vs-tabs {
+    .vs-tabs--content {
+      padding: 23px 10px !important;
+    }
+  }
+}
+
+
+// ======================================================================================
+// Theme: Light & Dark
+// ======================================================================================
+
+.d-theme-dark-bg,
+.d-theme-dark-light-bg {
+  background-color: $white;
+}
+
+.d-theme-dark-border {
+  border-color: $white;
+}
+
+.d-theme-border-grey-light {
+  // @apply border-grey-light;
+  border-color: #dae1e7;
+}
+
+.d-theme-text-inverse {
+  color: $white;
+}
+
+.theme-dark {
+  .d-theme-dark-bg {
+    background-color: $theme-dark-bg;
+  }
+
+  .d-theme-dark-light-bg {
+    background-color: $theme-light-dark-bg;
+  }
+
+  .d-theme-input-dark-bg {
+    input {
+      background-color: $theme-dark-bg;
+    }
+  }
+
+  .d-theme-heading-color {
+    color: $headings-color;
+  }
+
+  .d-theme-text-inverse {
+    color: $content-color;
+  }
+
+  .d-theme-border-grey-light,
+  .d-theme-dark-border {
+    border-color: $theme-dark-border-color;
+  }
+
+  // Table Inverted
+  .vs-con-table{
+    &.table-dark-inverted {
+      .vs-con-tbody {
+        .vs-table--tbody-table {
+          tr {
+            background: $theme-dark-bg !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ======================================================================================
+// Typography
+// ======================================================================================
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-big {
+  font-size: 4rem;
+}
+
+.text-color-base {
+  color: $content-color;
+}
+
+
+// ======================================================================================
+// Users List
+// ======================================================================================
+
+.user-list {
+  display: flex;
+
+  & .con-vs-avatar {
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.07);
+      box-shadow: 0 14px 24px rgba(62, 57, 107, 0.2);
+      // transform: translateY(-5px);
+      z-index: 999;
+    }
+  }
+}
+
+
+// ======================================================================================
+// Uncategorized
+// ======================================================================================
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+ul.bordered-items {
+  &>li:not(:last-of-type):not([class*='shadow']) {
+    border-bottom: 1px solid $grey-light;
+  }
+}
